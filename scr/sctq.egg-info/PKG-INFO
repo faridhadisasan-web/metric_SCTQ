@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: sctq
+Version: 0.1.0
+Summary: SCTQ: Self-Consistent Tracking Quality - an annotation-free MOT evaluation framework
+Author: SCTQ Authors
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.23.0
+Requires-Dist: scipy>=1.9.0
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: opencv-python>=4.6.0.66
+Requires-Dist: ultralytics>=8.0.0
+Requires-Dist: tqdm>=4.64.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
