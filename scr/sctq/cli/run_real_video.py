@@ -197,6 +197,7 @@ def run_real_video(
         json_reporter.save_per_run(f"real_{Path(video_path).stem}_{clip_id}_{t_name}", run_summary)
         csv_reporter.save_per_track(f"{clip_id}_{t_name}_per_track", sctq_summary["per_track_metrics"])
         json_reporter.save_per_track(f"{clip_id}_{t_name}_per_track", sctq_summary["per_track_metrics"])
+        csv_reporter.save_raw_tracks(f"{clip_id}_{t_name}_raw_tracks", list(trackset.tracks.values()))
 
     ranked = compute_ranking(all_run_summaries, "sctq_core")
     csv_reporter.save_aggregated("real_video_summary", ranked)
