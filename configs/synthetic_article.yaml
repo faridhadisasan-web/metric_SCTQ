@@ -1,0 +1,22 @@
+synthetic_benchmark:
+  scene_width: 1920
+  scene_height: 1080
+  fps: 30
+  duration_sec: 10
+
+  generation:
+    num_scenes: 20
+    seeds_per_scene: 5
+    base_seed: 42
+    objects_per_scene: [6, 18]
+    motion_types: ["linear", "curved", "crossing", "stop_and_go"]
+
+  rendering:
+    render_video: false
+    background_type: "blank"
+    color_palette: "hsv"
+    render_first_seed_only: true
+
+  noise:
+    apply_synthetic_noise: true
+    noise_types: ["random_drop", "jitter"]

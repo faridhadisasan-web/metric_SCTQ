@@ -1,0 +1,35 @@
+trackers:
+  - name: sort
+    type: internal
+    params:
+      max_age: 1
+      min_hits: 3
+      iou_threshold: 0.3
+
+  - name: iou
+    type: internal
+    params:
+      sigma_l: 0.0
+      sigma_h: 0.5
+      sigma_iou: 0.5
+      t_min: 2
+
+  - name: centroid
+    type: internal
+    params:
+      max_lost: 1
+
+  - name: centroidkf
+    type: internal
+    params:
+      max_lost: 1
+
+  - name: bytetrack
+    type: ultralytics
+    params:
+      yaml_path: bytetrack.yaml
+
+  - name: botsort
+    type: ultralytics
+    params:
+      yaml_path: botsort.yaml

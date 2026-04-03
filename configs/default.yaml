@@ -1,0 +1,24 @@
+project_name: sctq
+version: 0.2.0
+
+paths:
+  data_dir: data
+  raw_dir: data/raw
+  synthetic_dir: data/synthetic
+  processed_dir: data/processed
+  outputs_dir: data/outputs
+  configs_dir: configs
+
+defaults:
+  metrics_config: configs/metrics.yaml
+  trackers_config: configs/trackers.yaml
+  corruptions_config: configs/corruptions.yaml
+  synthetic_config: configs/synthetic_article.yaml
+  real_video_config: configs/real_video.yaml
+
+execution:
+  num_workers: 4
+  log_level: INFO
+  gpu_id: 0
+  strict_mode: true
+  clean_output_dirs: true

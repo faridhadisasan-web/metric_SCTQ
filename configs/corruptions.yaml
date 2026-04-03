@@ -1,0 +1,29 @@
+corruptions:
+  image_level:
+    - name: gaussian_noise
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+    - name: salt_and_pepper
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+    - name: gaussian_blur
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+    - name: motion_blur
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+
+  detection_level:
+    - name: gaussian_jitter_center
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+    - name: random_drop
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+    - name: false_positives
+      enabled: true
+      severities: [1, 2, 3, 4, 5]
+
+runner:
+  runs_per_severity: 3
+  seed: 42

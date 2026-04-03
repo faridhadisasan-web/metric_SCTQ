@@ -1,0 +1,33 @@
+metrics:
+  persistence:
+    alpha_p: 0.20
+
+  dynamics:
+    beta_1: 0.5
+    beta_2: 0.5
+    tau_phi: 0.35
+    tau_a: 10.0
+
+  fragmentation:
+    method: continuous_bridgeable
+    tau_short: 0.10
+    tau_t: 5
+    tau_s: 50.0
+    tau_theta: 0.5
+    w_t: 0.3
+    w_s: 0.4
+    w_theta: 0.3
+
+  consistency:
+    tau_size: 10.0
+    tau_conf: 0.2
+    gamma_1: 0.5
+    gamma_2: 0.5
+
+  sctq_weights:
+    w_p: 0.10
+    w_d: 0.10
+    w_f: 0.50
+    w_c: 0.30
+    lambda_stab: 0.20
+    use_gated_consistency: true

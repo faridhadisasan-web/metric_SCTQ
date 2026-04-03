@@ -1,0 +1,32 @@
+real_video:
+  input_dir: data/raw
+  output_dir: data/outputs
+  max_frames: 400
+  frame_sampling: uniform
+  frame_stride: 1
+
+  detector:
+    model: models/yolo11n.pt
+    allow_download: false
+    confidence_threshold: 0.3
+    image_size: 640
+    classes: [0]
+    max_frames: 400
+    frame_sampling: uniform
+    frame_stride: 1
+
+  trackers_to_run:
+    - sort
+    - iou
+    - centroid
+    - centroidkf
+    - bytetrack
+    - botsort
+
+  metrics:
+    compute_sctq: true
+    compute_stability: true
+
+  visualize:
+    render_video: false
+    plot_results: true
