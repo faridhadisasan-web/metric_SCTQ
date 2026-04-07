@@ -486,6 +486,7 @@ def run_corruption_benchmark(
             "number_of_tracks": len(clean_trackset.tracks),
         }
         all_runs_flat.append(clean_row)
+        csv_reporter.save_raw_tracks(f"{clip_id}_{t_name}_clean_raw_tracks", list(clean_trackset.tracks.values()))
 
         noisy_vectors = []
         for meta, noisy_dets in noisy_runs:
@@ -527,6 +528,10 @@ def run_corruption_benchmark(
             json_reporter.save_per_run(
                 f"{clip_id}_{t_name}_{meta['corruption_type']}_{meta['corruption']}_s{meta['severity']}_r{meta['run_index']}",
                 run_output,
+            )
+            csv_reporter.save_raw_tracks(
+                f"{clip_id}_{t_name}_{meta['corruption_type']}_{meta['corruption']}_s{meta['severity']}_r{meta['run_index']}_raw_tracks",
+                list(noisy_trackset.tracks.values()),
             )
 
         stability = compute_stability_score(clean_vectors[t_name], noisy_vectors)
